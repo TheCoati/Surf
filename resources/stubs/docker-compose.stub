@@ -1,0 +1,26 @@
+version: '3'
+services:
+    radicle.test:
+        build:
+            context: ./vendor/thecoati/surf/resources/runtimes/8.0
+            dockerfile: Dockerfile
+            args:
+                WWWGROUP: '${WWWGROUP:-1000}'
+        image: surf-8.0/app
+        extra_hosts:
+            - 'host.docker.internal:host-gateway'
+        ports:
+            - '${APP_PORT:-80}:80'
+            - '${VITE_PORT:-5173}:${VITE_PORT:-5173}'
+        environment:
+            WWWUSER: '${WWWUSER:-1000}'
+            RADICLE_SURF: 1
+            XDEBUG_MODE: '${SURF_XDEBUG_MODE:-off}'
+            XDEBUG_CONFIG: '${SURF_XDEBUG_CONFIG:-client_host=host.docker.internal}'
+        volumes:
+            - '.:/var/www/html'
+        networks:
+            - surf
+networks:
+    surf:
+        driver: bridge
