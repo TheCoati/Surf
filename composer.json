@@ -15,6 +15,12 @@
             "role": "Maintainer"
         }
     ],
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/TheCoati"
+        }
+    ],
     "require": {
         "php": "^8.0",
         "nunomaduro/termwind": "^1.14",
