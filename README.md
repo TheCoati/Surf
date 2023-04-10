@@ -59,5 +59,5 @@ To make sure this is always available, you may add this to your shell configurat
 Once the shell alias has been configured, you may execute Surf commands by simply typing `surf`. The remainder of this documentation's examples will assume that you have configured this alias:
 
 ```bash
-sail up
+surf up
 ```
