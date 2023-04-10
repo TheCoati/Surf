@@ -1,6 +1,6 @@
 {
     "name": "thecoati/surf",
-    "description": "Docker files for running a basic Radicle application..",
+    "description": "Docker files for running a basic Radicle application.",
     "keywords": ["docker", "sail", "radicle"],
     "homepage": "https://roots.io/radicle/",
     "type": "project",
